@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quantum Valentine Messenger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quantum Valentine Messenger</h1>
+        <div id="sender" class="card">
+            <h2>Sender (Alice)</h2>
+            <p>Take your photo:</p>
+            <video id="sender-video" autoplay playsinline></video>
+            <canvas id="sender-canvas" style="display: none;"></canvas>
+            <button id="sender-capture-button">Capture Photo</button>
+            <img id="sender-photo" alt="Sender Photo" style="display: none;">
+            <p>Select a message to send:</p>
+            <select id="message-select">
+                <option>Will you be my Valentine?</option>
+                <option>Do you like me?</option>
+                <option>Can we have coffee together?</option>
+                <option>You make my heart race.</option>
+                <option>Be mine, forever.</option>
+                <option>You're special to me.</option>
+                <option>Do you feel the same?</option>
+                <option>You're the one for me.</option>
+            </select>
+            <button id="send-button">Send Message</button>
+            <p id="sender-status"></p>
+        </div>
+
+        <div id="receiver" class="card">
+            <h2>Receiver (Bob)</h2>
+            <p>Take your photo:</p>
+            <video id="receiver-video" autoplay playsinline></video>
+            <canvas id="receiver-canvas" style="display: none;"></canvas>
+            <button id="receiver-capture-button">Capture Photo</button>
+            <img id="receiver-photo" alt="Receiver Photo" style="display: none;">
+            <p id="receiver-message">Awaiting message...</p>
+            <button id="decrypt-button" style="display: none;">Decrypt Message</button>
+            <div id="response-buttons" style="display: none;">
+                <p>Respond to the message:</p>
+                <button id="yes-button">Yes</button>
+                <button id="no-button">No</button>
+            </div>
+            <p id="response-status"></p>
+        </div>
+
+        <div id="match-found" class="card" style="display: none;">
+            <h2>Match Found!</h2>
+            <div class="photos">
+                <div>
+                    <img id="match-sender-photo" alt="Sender Photo">
+                    <p>Sender</p>
+                </div>
+                <div>
+                    <img id="match-receiver-photo" alt="Receiver Photo">
+                    <p>Receiver</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
